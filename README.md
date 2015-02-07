@@ -1,5 +1,7 @@
 # Yellow Canary - The HA Failure Stimulator
 
+**TL;DR:** Similar to Chaos Monkey but just a single simple script; good for smaller deployments.
+
 Yellow Canary is a script that stimulates failures on your systems to help identify weaknesses in your high availability systems. The theory is simple: our HA systems don't get enough exercise and things break in production when you least want them to, so why not trigger more failures in environments on an ongoing basis so we can find all the little gotchas that are hiding in our otherwise brilliant architecture. :)
 
 You can even consider running running this script in production, but to help you get more sleep and spend time with your family, perhaps just schedule that as a cron job that runs from 9am-11am Tuesday to Thursday.
