@@ -2,9 +2,9 @@
 
 **TL;DR:** Similar to Chaos Monkey but just a single simple script; good for smaller deployments.
 
-Yellow Canary is a script that stimulates failures on your systems to help identify weaknesses in your high availability systems. The theory is simple: our HA systems don't get enough exercise and things break in production when you least want them to, so why not trigger more failures in environments on an ongoing basis so we can find all the little gotchas that are hiding in our otherwise brilliant architecture. :)
+Yellow Canary is a script that stimulates failures on your systems to help identify weaknesses in your high availability systems. The theory is simple: our HA systems don't get enough exercise and things break in production when you least want them to, so why not trigger more failures in our environments on an ongoing basis so we can find more of the little gotchas that are hiding in our otherwise brilliant architecture. :)
 
-You can even consider running running this script in production, but to help you get more sleep and spend time with your family, perhaps just schedule that as a cron job that runs from 9am-11am Tuesday to Thursday.
+You can even consider running this in production, but to help you get more sleep and spend time with your family, perhaps just schedule that to run from 9am-11am Tuesday to Thursday.
 
 This script simply sends STOP or KILL signals to a list of processes (or their children) at random intervals. 
 
@@ -19,7 +19,7 @@ This script simply sends STOP or KILL signals to a list of processes (or their c
 
     Example:
 
-    yellow-canary --min-interval 10 --max-interval 1800 --iterations 10 --stop-weight 50 java nginx apache2 docker collectd haproxy 
+    yellow-canary --min-interval 10 --max-interval 1800 --iterations 10 --stop-weight 50 java nginx apache2 docker collectd haproxy etcd
     
 
 ## Project Status
